@@ -70,11 +70,11 @@ class Temp extends Component {
      
         <h1>Injured</h1>
           <div> 
-          {this.props.injuries.map((item, index) => {
+          {this.props.standings.map((item, index) => {
             return(
               <div key={index}> 
 
-              <p>  {item.player.FirstName} {item.player.LastName}, {item.injury} </p> 
+              <p>  {item.stats} </p> 
 
               </div>
               )
@@ -96,8 +96,8 @@ class Temp extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    injuries: state.playerInjuries.data
-    // standings: state.teamStandings.data
+    // injuries: state.playerInjuries.data
+    standings: state.teamStandings.data
   }
 }
 
