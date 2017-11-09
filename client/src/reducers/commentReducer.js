@@ -1,18 +1,12 @@
 
 const initialState = {
-	lat: 40.758896,
-	lng: -73.985130,
+	
 	comments: [],
 }
 
-const map = (state=initialState, action) => {
+const comments = (state=initialState, action) => {
  switch(action.type) {
- 	case 'UPDATE_MAP_LOCATION':
- 		return {
- 			...state,
- 			lat: action.lat,
- 			lng: action.lng
- 		}
+ 	
 
 	case 'RECIEVED_COMMENTS':
 		return {
@@ -23,4 +17,4 @@ const map = (state=initialState, action) => {
  		return state
  }
 }
-export default map
+export default comments

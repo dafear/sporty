@@ -1,14 +1,9 @@
  import axios from 'axios'
+ // import $ from 'jquery'
 
 
 
- // export const UPDATE_MAP_LOCATION = 'UPDATE_MAP_LOCATION';
- // export const upDateMapLocation = (lat, lng) => ({
- //  type: UPDATE_MAP_LOCATION,
- //  lat,
- //  lng
-
- // });
+ 
 
  export const registerUser = (email, password)=> {
    return (dispatch) => {
@@ -51,72 +46,140 @@
    }
   }
 
-// export const RECIEVED_COMMENTS = 'RECIEVED_COMMENTS';
-// export const recievedComments = (comments) => ({
-//   type: RECIEVED_COMMENTS,
-//   comments
-// });
 
-// export const fetchComments = () => {
-//  return (dispatch) => {
 
-// 	const instance = axios.create({ headers: { 'Content-Type': 'application/json' } });
+ export const OVERALL_TEAM_STANDINGS = 'OVERALL_TEAM_STANDINGS';
+ export const overallTeamStandings = (teamstandingsentry) => ({
+  type: OVERALL_TEAM_STANDINGS,
+  teamstandingsentry
 
-// 	return instance.get('http://localhost:8080/api/comment')
-// 	.then(response => {
-//     console.log(response.data);
-// 	   dispatch(recievedComments(response.data))
-//   })
 
-// 	.catch(function (error) {
-// 		console.log(error);
-// 	});
-//  }
-// }
+ });
 
-// export const saveComment = (lat, lng, comment) => {
-//  return (dispatch) => {
+ export const teamStandings = () => {
+ return (dispatch) => {
 
-//    const token = localStorage.getItem('apiToken');
-//    fetch('http://localhost:8080/api/comment', {
-//        method: 'POST',
-//        headers: {
-//            // Provide our username and password as login credentials
-//            Authorization: `Bearer ${token}`,
-//            'Content-Type': 'application/json'
-//        },
-//        body: JSON.stringify({lat, lng, comment})
-//    })
-//    .then(res => res.json())
-//    .then(comments => {
-//      dispatch(recievedComments(comments))
-//      window.location = '/dashboard'
-//    })
-//    .catch(err => {
-//       console.log(err);
-//    })
-//  }
-// }
+  fetch('https://api.mysportsfeeds.com/v1.1/pull/nba/2017-2018-regular/overall_team_standings.json?', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+       "Authorization": "Basic " + btoa("dafear" + ":" + "sidney12"),
+       'Content-Type': 'application/json'
+    },
+    body: JSON.stringify()
 
-// export const ON_MAP_MARKER_CLICK = 'ON_MAP_MARKER_CLICK';
-// export const onMapMarkerClick = (marker, history) => {
-//   return dispatch => {
-//     const token = localStorage.getItem('apiToken');
-//     fetch(`http://localhost:8080/api/comment/${marker.lat}/${marker.lng}`, {
-//         method: 'GET',
-//         headers: {
-//             // Provide our username and password as login credentials
-//             Authorization: `Bearer ${token}`,
-//             'Content-Type': 'application/json'
-//         },
-//     })
-//     .then(res => res.json())
-//     .then(comments => {
-//       dispatch(recievedComments(comments))
-//       history.push('/comments')
-//     })
-//     .catch(err => {
-//        console.log(err);
-//     })
-//   }
-// }
+  })
+  .then(res => res.json())
+  .then(data => {
+    dispatch(overallTeamStandings(data.overallteamstandings.teamstandingsentry)) 
+    
+  }) 
+   .catch(err => {
+    console.log(err);
+   })
+
+ }
+}
+
+ export const ACTIVE_PLAYERS = 'ACTIVE_PLAYERS';
+ export const activePlayers = (playerentry) => ({
+  type: ACTIVE_PLAYERS,
+  playerentry
+
+ });
+
+export const currentPlayers = () => {
+ return (dispatch) => {
+
+  fetch('https://api.mysportsfeeds.com/v1.1/pull/nba/2017-2018-regular/active_players.json', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+       "Authorization": "Basic " + btoa("dafear" + ":" + "sidney12"),
+       'Content-Type': 'application/json'
+    },
+    body: JSON.stringify()
+
+  })
+  .then(res => res.json())
+   .then(data => {
+    dispatch(activePlayers(data.activeplayers.playerentry))
+  
+  }) 
+   .catch(err => {
+    console.log(err);
+   })
+
+ }
+}
+
+
+export const PLAYER_INJURIES = 'PLAYER_INJURIES';
+ export const playerInjuries = (playerentry) => ({
+  type: PLAYER_INJURIES,
+   playerentry
+
+ });
+
+export const hurtPlayers = () => {
+ return (dispatch) => {
+
+  fetch('https://api.mysportsfeeds.com/v1.1/pull/nba/2017-2018-regular/player_injuries.json', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+       "Authorization": "Basic " + btoa("dafear" + ":" + "sidney12"),
+       'Content-Type': 'application/json'
+    },
+    body: JSON.stringify()
+
+  })
+  .then(res => res.json())
+   .then(data => {
+    dispatch(playerInjuries(data.playerinjuries.playerentry))
+  }) 
+   .catch(err => {
+    console.log(err);
+   })
+
+ }
+}
+
+
+
+
+
+
+export const RECIEVED_COMMENTS = 'RECIEVED_COMMENTS';
+export const recievedComments = (comments) => ({
+  type: RECIEVED_COMMENTS,
+  comments
+});
+
+
+
+export const saveComment = (comment) => {
+ return (dispatch) => {
+
+   const token = localStorage.getItem('apiToken');
+   fetch('http://localhost:8080/api/comment', {
+       method: 'POST',
+       headers: {
+           // Provide our username and password as login credentials
+           Authorization: `Bearer ${token}`,
+           'Content-Type': 'application/json'
+       },
+       body: JSON.stringify({comment})
+   })
+   .then(res => res.json())
+   .then(comments => {
+     dispatch(recievedComments(comments))
+     window.location = '/dashboard'
+   })
+   .catch(err => {
+      console.log(err);
+   })
+ }
+}
+
+

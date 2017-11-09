@@ -7,19 +7,12 @@ import { saveComment } from '../../actions'
 
 
 class AddComment extends Component {
-    constructor(props) {
-      super(props)
-      this.state = { address: '', lat: '', lng: ''}
-      this.onChange = (address) => this.setState({ address })
+    constructor() {
+      super()
+     
     }
 
-    handleSelect(props, e) {
-      geocodeByAddress(this.state.address)
-      .then(results => getLatLng(results[0]))
-      .then (latLng => this.setState({lat: latLng.lat, lng: latLng.lng}))
-      .catch(error => console.error('Error', error))
-      this.setState({address: ''})
-    }
+   
 
     render() {
       const props = this.props
@@ -87,20 +80,12 @@ class AddComment extends Component {
 
 
 
-      const inputProps = {
-        value: this.state.address,
-        onChange: this.onChange,
-        placeholder: 'Enter Location...'
-      }
 
 
         return (
           <div className="Comment" style={style}>
 
-           <video className="fullscreen-bg__video" playsInline autoPlay muted loop>
-              <source src="movie.mp4" type="video/mp4"/>
-                  </video>
-
+        
             
 
             <form className="register-form" onSubmit={(e) => {
@@ -108,32 +93,28 @@ class AddComment extends Component {
 
               const comment = e.target.comment.value
 
-              this.props.dispatch(saveComment(this.state.lat, this.state.lng, comment))
+              this.props.dispatch(saveComment(comment))
 
             }}>
 
             <h1>Enter Your Location</h1>
 
-            <PlacesAutocomplete inputProps={inputProps}
-              styles={myStyles}
-              onEnterKeyDown={(e) => this.handleSelect(props, e)}
-              onSelect={(e) => this.handleSelect(props, e)}
-            />
+           
 
-            <h2  style={styles3}>Add Your Comment </h2>
+            <h2>Add Your Comment </h2>
 
               <textarea 
 
-              style={style2} type="text" required placeholder="Enter Comment" name="comment">
+               type="text" required placeholder="Enter Comment" name="comment">
 
 
               </textarea>
 
-                  <br/><button style={style4}  type="submit">Submit</button>
+                  <br/><button  type="submit">Submit</button>
 
             </form>
 
-             <Link  style={savedStyle} to="/dashboard">Back to Searching</Link>
+             <Link  to="/dashboard">Back to Searching</Link>
 
           </div>
     );

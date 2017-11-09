@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
+import {teamStandings} from '../../actions'
+import {currentPlayers} from '../../actions'
+import {hurtPlayers} from '../../actions'
 import './Comments.css';
 
 
 class Temp extends Component {
+
+  componentDidMount() {
+    this.props.dispatch(teamStandings())
+    this.props.dispatch(currentPlayers())
+    this.props.dispatch(hurtPlayers())
+  }
+
+
+
 
   handleLogout() {
       localStorage.removeItem('apiToken');
@@ -55,15 +67,26 @@ class Temp extends Component {
 
     return (
       <div className="Comments">
-       <video className="fullscreen-bg__video" playsInline autoPlay muted loop>
-                      <source src="video.mp4" type="video/mp4"/>
-                    </video>
-        <h1 style={style3}>Comments</h1>
-          
-            <div className="comment-section" style={style2}>
-              <p className="comment-text">cool</p>
+     
+        <h1>Injured</h1>
+          <div> 
+          {this.props.injuries.map((item, index) => {
+            return(
+              <div key={index}> 
+
+              <p>  {item.player.FirstName} {item.player.LastName}, {item.injury} </p> 
+
+              </div>
+              )
+          })}
+
+           </div>
+
+
+           
              
-            </div>
+             
+           
            <button className="Dap-button" onClick={() => this.handleLogout()}>Log Out</button>
          <Link  style={savedStyle} to="/dashboard">Back to Searching</Link>
 
@@ -71,7 +94,13 @@ class Temp extends Component {
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    injuries: state.playerInjuries.data
+    // standings: state.teamStandings.data
+  }
+}
 
 
 
-export default Temp;
+export default connect(mapStateToProps)(Temp);

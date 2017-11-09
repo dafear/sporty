@@ -42,8 +42,8 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
   })
 });
 
-router.get('/:lat/:lng', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Comment.find({lat: req.params.lat, lng: req.params.lng}, (error, comments) => {
+router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Comment.find((error, comments) => {
     if(error) {
       res.send(error)
     }

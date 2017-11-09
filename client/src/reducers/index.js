@@ -1,10 +1,15 @@
 import { combineReducers } from 'redux'
-import hood from './hood'
-import map from './commentReducer'
+import activePlayers from './activePlayersReducer'
+import comments from './commentReducer'
+import playerInjuries from './playerInjuriesReducer'
+import teamStandings from './teamStandingsReducer'
 
 const rootReducer = combineReducers({
-	hood,
-	map 
+	activePlayers,
+	comments,
+	playerInjuries,
+	teamStandings
+
 
 })
 
