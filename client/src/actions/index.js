@@ -8,7 +8,7 @@
  export const registerUser = (email, password)=> {
    return (dispatch) => {
 
-     return fetch('http://localhost:8080/api/auth/register', {
+     return fetch('https://fun-and-sports.herokuapp.com/api/auth/register', {
          method: 'POST',
          headers: {
              'content-type': 'application/json'
@@ -28,7 +28,7 @@
    return (dispatch) => {
 
      const token = btoa(`${email}:${password}`);
-     fetch('http://localhost:8080/api/auth/login', {
+     fetch('https://fun-and-sports.herokuapp.com/api/auth/login', {
          method: 'POST',
          headers: {
              // Provide our username and password as login credentials
