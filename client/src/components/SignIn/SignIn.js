@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {signinUser} from '../../actions/index';
 import {connect} from 'react-redux';
-// import './cool.css';
-import axios from 'axios';
+
 
 
 
@@ -33,34 +32,12 @@ class SignIn extends Component {
 
 
 
-
-
     render() {
-
-       const style4 = {
-
-         backgroundColor: '#99c5ff',
-          borderRadius: 5,
-          width: '98px',
-          textAlign: 'center',
-          padding: 5,
-          margin: 5,
-          color: 'white',
-          fontSize: 18,
-      }
-
-
-
 
 
        const style = {
             textAlign: 'center',
            };
-
-
-        const style2 = {
-          color: '#FF8C00',
-        }
 
 
            // console.log(this.state.error);
@@ -72,30 +49,17 @@ class SignIn extends Component {
 
 
 
-        // let loading = ""
-        // if (this.state.submitted) {
-        //   loading =  <div className='loading-indicator'> </div>
-        // }
+      return (
 
-
-
-
-
-  return (
-
-       <div className="Signin" style={style}>
-        <video className="fullscreen-bg__video" playsInline autoPlay muted loop>
-                      <source src="video.mp4" type="video/mp4"/>
-                    </video>
-
+              <div className="Signin" style={style}>
         
 
-           <form  className="login-form" onSubmit={(event)=>{
+              <form className="login-form" onSubmit={(event)=>{
                 event.preventDefault()
                 this.props.dispatch(signinUser(this.state.email, this.state.password))
-                }}>
+               }}>
 
-                  <h1>SPORTY</h1>
+                   <h1>BASKET CASE</h1>
                   <h2>A Different Kind of Game!</h2>
 
               <input
@@ -112,7 +76,8 @@ class SignIn extends Component {
                   value={this.state.password}
                   onChange={this.handlePasswordChange}
                 /><br/>
-                <button style={style4}>Sign In</button>
+                <button className="app-button">Sign In</button>
+
                 <p>{errorMessage}</p>
 
               </form>
@@ -125,4 +90,4 @@ class SignIn extends Component {
     )
   }
 }
-export default connect() (SignIn)
+export default connect()(SignIn)

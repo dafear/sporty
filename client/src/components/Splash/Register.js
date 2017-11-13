@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
-import axios from 'axios';
 import {connect} from 'react-redux'
 import {registerUser} from '../../actions/index'
 import './register.css';
@@ -30,56 +29,23 @@ import './register.css';
   }
 
 
-
-
-
     render() {
 
-       const style4 = {
-
-         backgroundColor: '#99c5ff',
-          borderRadius: 5,
-          width: '98px',
-          textAlign: 'center',
-          padding: 5,
-          margin: 5,
-          color: 'white',
-          fontSize: 18,
-      }
-
-
-
-
+      
       const style = {
         textAlign: 'center',
     };
-
-
-      const savedStyle = {
-
-          position: 'absolute',
-          top: 10,
-          right: 10,
-      };
-
-
-      const title = {
-        fontFamily: 'Open Sans',
-        fontStyle: 'italic'
-      }
+    
 
       const subtitle = {
         fontFamily: 'Open Sans',
         fontWeight: 'bold'
       }
 
-
-
           return (
+
                <div className="list" style={style}>
-               <video className="fullscreen-bg__video" playsInline autoPlay muted loop>
-                      <source src="video.mp4" type="video/mp4"/>
-                    </video>
+             
                   
 
                  <form className="register-form" onSubmit={(event)=>{
@@ -88,13 +54,13 @@ import './register.css';
                    }}>
 
 
+              <div>
 
+                     <h1>BASKET CASE</h1>
+                     <h2 style={subtitle}>Not your normal Basketball Game.
+                     <br/>Register here and find out who's playing!</h2>
 
-                   <div>
-                     <h1 style={title}>SPORTY</h1>
-                     <h2 style={subtitle}> Not your normal Basketball Game.
-                     <br/> Register here and find out who's playing! </h2>
-                     </div>
+                    </div>
 
                    <input
 
@@ -127,4 +93,4 @@ import './register.css';
 
   };
 
-      export default connect() (Register)
+      export default connect()(Register)

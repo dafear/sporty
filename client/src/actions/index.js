@@ -1,5 +1,5 @@
- import axios from 'axios'
- // import $ from 'jquery'
+
+ 
 
 
 
@@ -150,36 +150,6 @@ export const hurtPlayers = () => {
 
 
 
-export const RECIEVED_COMMENTS = 'RECIEVED_COMMENTS';
-export const recievedComments = (comments) => ({
-  type: RECIEVED_COMMENTS,
-  comments
-});
 
-
-
-export const saveComment = (comment) => {
- return (dispatch) => {
-
-   const token = localStorage.getItem('apiToken');
-   fetch('http://localhost:8080/api/comment', {
-       method: 'POST',
-       headers: {
-           // Provide our username and password as login credentials
-           Authorization: `Bearer ${token}`,
-           'Content-Type': 'application/json'
-       },
-       body: JSON.stringify({comment})
-   })
-   .then(res => res.json())
-   .then(comments => {
-     dispatch(recievedComments(comments))
-     window.location = '/dashboard'
-   })
-   .catch(err => {
-      console.log(err);
-   })
- }
-}
 
 

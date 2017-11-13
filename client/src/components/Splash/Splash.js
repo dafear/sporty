@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Register from './Register'
-// import {Link} from 'react-router-dom'
+
 
  class Splash extends Component {
 
@@ -9,7 +9,6 @@ import Register from './Register'
  	return(
  		
 	<div>
-	
 		<Register />
 	</div>
 

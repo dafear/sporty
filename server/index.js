@@ -20,7 +20,7 @@ mongoose.Promise = global.Promise;
 
 
 
-// const commentRouter = require('./routers/commentRouter.js');
+const userRouter = require('./routers/userRouter.js');
 const {PORT, DATABASE_URL} = require('./config');
 const {router: authRouter, basicStrategy, jwtStrategy} = require('./auth');
 
@@ -45,7 +45,7 @@ passport.use(basicStrategy);
 passport.use(jwtStrategy);
 
 app.use('/api/auth/', authRouter);
-// app.use('/api/comment', commentRouter);
+app.use('/api/user', userRouter);
 
 
 let server;

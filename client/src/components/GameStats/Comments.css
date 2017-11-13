@@ -7,17 +7,19 @@ html, body {
 
 
 
-  body {
+  .InGames {
   background: white;
   color: black;
   font-family: 'Roboto', helvetica, sans-serif;
-  padding: 0;
+  padding: 0px;
   margin: 0;
   padding-top: 60px;
   /*background-image: url("../../images/nb.png");*/
   background-repeat: no-repeat;
   background-size: cover;
-   position: absolute;
+  background-position: center;
+ /* background-attachment: fixed;*/
+   /*position: absolute;*/
   top: 0;
   left: 0;
   right: 0;
