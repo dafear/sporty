@@ -36,18 +36,21 @@ html, body {
 }*/
 
 .app-button {
-  background-color: #3498db!important;
+  background-color: #9b59b6!important;
   color: #fff!important;
   padding: 15px;
   width: 200px;
   border: none;
   font-size: 15px;
+  text-shadow: 4px 4px 8px #000;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   border-radius: 7px;
 }
 
-
+.linker-style {
+  text-shadow: 4px 4px 8px #000;
+}
 
 
 /*.fullscreen-bg__video {

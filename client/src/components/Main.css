@@ -109,7 +109,7 @@ div.venueItem {
  
   top: 10;
   left: 0;
-  background-color: #3498db!important;
+  background-color: #9b59b6!important;
   color: #fff!important;
   padding: 15px;
   width: 200px;
@@ -118,6 +118,7 @@ div.venueItem {
   border: none;
   padding: 10px;
   font-size: 15px;
+  text-shadow: 4px 4px 8px #000;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   border-radius: 7px;
@@ -125,7 +126,7 @@ div.venueItem {
 
 .Dap-button {
  
-  background-color: #99C5FF!important;
+  background-color: #9b59b6!important;
   color: #fff!important;
   padding: 15px;
    text-shadow: 4px 4px 8px #000;
@@ -136,6 +137,7 @@ div.venueItem {
   border: none;
   padding: 10px;
   font-size: 15px;
+  text-shadow: 4px 4px 8px #000;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   border-radius: 7px;
@@ -157,7 +159,7 @@ div.venueItem {
 
      .Reg {
 
-      background-color: #99c5ff;
+      background-color: #9b59b6;
           border-radius: 5px;
           width: 200;
            vertical-align: middle;
@@ -168,6 +170,7 @@ div.venueItem {
           margin-top: 5;
           color: white;
           font-size: 18px;
+          text-shadow: 4px 4px 8px #000;
           text-transform: uppercase;
         font-family: 'Lato', sans-serif;
 
@@ -176,7 +179,7 @@ div.venueItem {
 
          .Sign {
 
-      background-color: #99c5ff;
+      background-color: #9b59b6;
           border-radius: 5px;
           width: 200;
            vertical-align: middle;
@@ -187,6 +190,7 @@ div.venueItem {
           margin-top: 5;
           color: white;
           font-size: 18px;
+          text-shadow: 4px 4px 8px #000;
            text-transform: uppercase;
         font-family: 'Lato', sans-serif;
         }

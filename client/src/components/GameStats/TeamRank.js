@@ -31,7 +31,7 @@ class TeamRank extends Component {
           position: 'absolute',
           top: 10,
           right: 0,
-          backgroundColor: '#99c5ff',
+          backgroundColor: '#9b59b6',
           borderRadius: 5,
           width: 150,
           textAlign: 'center',
@@ -93,7 +93,7 @@ class TeamRank extends Component {
            </div>        
                         
            <button className="Dap-button" style={savedStyle5} onClick={() => this.handleLogout()}>Log Out</button>
-         <Link  style={savedStyle} to="/dashboard">Back to Searching</Link>
+         <Link className="linker-style"  style={savedStyle} to="/dashboard">Back to Searching</Link>
 
       </div>
     )

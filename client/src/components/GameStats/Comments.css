@@ -6,7 +6,7 @@ html, body {
 }
 
 
-
+/*
   .InGames {
   background: white;
   color: black;
@@ -14,12 +14,11 @@ html, body {
   padding: 0px;
   margin: 0;
   padding-top: 60px;
-  /*background-image: url("../../images/nb.png");*/
+ 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
- /* background-attachment: fixed;*/
-   /*position: absolute;*/
+
   top: 0;
   left: 0;
   right: 0;
@@ -27,10 +26,8 @@ html, body {
   margin: auto;
   min-width: 50%;
   min-height: 50%;
-   /* z-index: 2;
-  position: relative;*/
-
-}
+  
+}*/
 
 /*.loading-indicator {
   margin:0 auto;
@@ -43,6 +40,10 @@ html, body {
  color: #ff8000;
  text-decoration: none;
  }
+
+ 
+
+
 
 .comment-section {
   padding: 10px;

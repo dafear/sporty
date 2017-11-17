@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 import {currentPlayers} from '../../actions'
-// import './Comments.css';
+import './Comments.css';
 
 
 class CurrentGammers extends Component {
@@ -27,10 +27,10 @@ class CurrentGammers extends Component {
 
     const savedStyle = {
 
-          position: 'absolute',
+         position: 'absolute',
           top: 10,
           right: 0,
-          backgroundColor: '#99c5ff',
+          backgroundColor: '#9b59b6',
           borderRadius: 5,
           width: 150,
           textAlign: 'center',
@@ -85,20 +85,20 @@ class CurrentGammers extends Component {
                <h3 className="title" style={style1}> PLAYER</h3>
             <p><strong> {item.player.FirstName} {item.player.LastName}, #{item.player.JerseyNumber}</strong></p>
 
-                <h3 style={style1}> POSITION</h3>
+                <h3 className="title" style={style1}> POSITION</h3>
               <p>{item.player.Position}</p>  
 
-                <h3 style={style1}>HEIGHT/WEIGHT</h3>
+                <h3 className="title" style={style1}>HEIGHT/WEIGHT</h3>
                    <p>{item.player.Height}, {item.player.Weight}lbs</p> 
 
-                      <h3 style={style1}>AGE</h3>
+                      <h3 className="title" style={style1}>AGE</h3>
                         <p>{item.player.Age}</p>
 
-                      <h3 style={style1}> ROOKIE</h3>  
+                      <h3 className="title" style={style1}> ROOKIE</h3>  
                        <p>{item.player.IsRookie}</p>
 
 
-                        <h3 style={style1}>TEAM</h3>
+                        <h3 className="title" style={style1}>TEAM</h3>
                       {item.team ? <p>{item.team.Name}</p> : ''} 
            
                  </div>
@@ -110,7 +110,7 @@ class CurrentGammers extends Component {
              
            
            <button className="Dap-button" style={savedStyle5} onClick={() => this.handleLogout()}>Log Out</button>
-         <Link  style={savedStyle} to="/dashboard">Back to Searching</Link>
+         <Link className="linker-style"  style={savedStyle} to="/dashboard">Back to Searching</Link>
 
       </div>
     )
