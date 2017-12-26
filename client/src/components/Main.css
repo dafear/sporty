@@ -146,10 +146,11 @@ div.venueItem {
 
 
 .wrapper {
+  margin-top: 30px;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
-  position: absolute;
+  /*position: absolute;*/
   top: 50%;
   left: 50%;
   left: 0px;
@@ -225,9 +226,12 @@ div.venueItem {
 
 
 .change {
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
+  color:  #F0FFFF;
+ /* color: white;*/
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
+ /* font-weight: bold;*/
 }
 
 .next {
@@ -278,6 +282,49 @@ div.venueItem {
     padding: 10px;
     width: 73%;
 
+}
+
+
+
+
+
+
+
+.wow {
+ /* display: block;*/
+ /*  margin:0 auto;*/
+  height: 240px;
+  
+  /*width: 60px;*/
+  /*position: absolute;*/
+}
+
+.super {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 5px;
+  border: 1px solid red;
+  width: 700px;
+ /* background: white;*/
+}
+
+.oj {
+ display: inline-block;
+ /*background: green;*/
+ margin: auto;
+}
+
+.para1 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.para2 {
+  /*margin-left: 60px;*/
+  margin-right: 5px;
 }
 
 
@@ -534,6 +581,25 @@ div.venueItem {
         .LinkStyle2{
                 width: 100px;
               }
+                    .wow {
+        height: 100px;
+      }
+
+      .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 200px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 
 
 }
@@ -636,6 +702,21 @@ div.venueItem {
                 .LinkStyle2{
                 width: 100px;
        }
+             .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 200px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
      }
 
 /* Portrait */
@@ -700,6 +781,21 @@ div.venueItem {
        .LinkStyle2{
                 width: 100px;
               }
+                .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 }
 
 
@@ -734,6 +830,21 @@ div.venueItem {
       .LinkStyle2{
                 width: 100px;
               }
+                    .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 200px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 }
 
 /* Portrait */
@@ -798,6 +909,21 @@ div.venueItem {
        .LinkStyle2{
                 width: 100px;
               }
+                .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 }
 
 
@@ -832,6 +958,21 @@ div.venueItem {
       .LinkStyle2{
                 width: 100px;
               }
+              .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 200px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 
 }
 
@@ -892,6 +1033,21 @@ div.venueItem {
       .LinkStyle2{
                 width: 100px;
               }
+               .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 
 }
 
@@ -1002,6 +1158,21 @@ div.venueItem {
       input {
       width: 100%;
      }
+      .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 
   }
 
@@ -1137,5 +1308,44 @@ div.venueItem {
       input {
       width: 100%;
      }
+      .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 
 }
+@media only screen
+and (min-height: 361px)
+and (max-height: 411px)
+and (min-width: 641px)
+and (max-width: 731px)
+and (orientation:landscape){
+    .super{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 500px;
+      }
+      .para1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+       .para2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+   
+}
+
