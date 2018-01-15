@@ -59,8 +59,8 @@ class SignIn extends Component {
                 this.props.dispatch(signinUser(this.state.email, this.state.password))
                }}>
 
-                   <h1>BASKET CASE</h1>
-                  <h2>A Different Kind of Game!</h2>
+                   <h1 className="catch">BASKET CASE</h1>
+                  <h2 className="leader">A Different Kind of Game!</h2>
 
               <input
                   type="text"

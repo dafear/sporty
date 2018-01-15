@@ -72,7 +72,7 @@ class CurrentGammers extends Component {
 
       <div className="InGames">
      
-        <h1>Active</h1>
+        <h1 className="leader">Active</h1>
 
           <div>
 

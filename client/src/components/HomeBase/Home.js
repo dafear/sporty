@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
-import cooler from '../../images/cooler.png';
+import holder from '../../images/holder.png';
 import search from '../../images/search.png';
 // import './Comments.css';
 
@@ -27,6 +27,7 @@ class Home extends Component {
     const style2 = {
         fontSize: '30px',
         textAlign: 'center',
+
     }
 
   
@@ -36,7 +37,7 @@ class Home extends Component {
 
       <div className="LinkUp" style={style2}>
      
-        <h1>BASKET CASE</h1>
+        <h1 className="catch">BASKET CASE</h1>
          <p className="change">Get your<br/> basket ball stats the way you want 'em<br/> ...fast!<br/> 
           </p>
   
@@ -50,7 +51,7 @@ class Home extends Component {
 
             
              <div className="super">
-                 <img className="wow" src={cooler} alt="cooler" />
+                 <img className="wow" src={holder} alt="holder" />
                  <div className="oj">
                   <h3 className="para1">Find Your NBA Stats!</h3>
                   <p> Find stats in 3 categories, Leaders, Injured and Still Playing.</p>

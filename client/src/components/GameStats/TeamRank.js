@@ -73,7 +73,7 @@ class TeamRank extends Component {
 
       <div className="HighRank">
      
-        <h1>Leauge Rankings</h1>
+        <h1 className="leader">Leauge Rankings</h1>
 
           <div> 
           {this.props.standings.map((item, index) => {

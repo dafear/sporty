@@ -69,7 +69,7 @@ class NotPlaying extends Component {
 
       <div className="OutGames">
      
-        <h1>Injured</h1>
+        <h1 className="leader">Injured</h1>
 
           <div> 
           {this.props.injuries.map((item, index) => {

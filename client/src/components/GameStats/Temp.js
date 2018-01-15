@@ -65,7 +65,7 @@ class Temp extends Component {
                  <div className="container">
 
      
-                 <h1>STATS</h1>
+                 <h1 className="leader">STATS</h1>
 
 
 

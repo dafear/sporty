@@ -38,7 +38,7 @@ import './register.css';
     
 
       const subtitle = {
-        fontFamily: 'Open Sans',
+        fontFamily: 'Droid Serif',
         fontWeight: 'bold'
       }
 
@@ -56,7 +56,7 @@ import './register.css';
 
               <div>
 
-                     <h1>BASKET CASE</h1>
+                     <h1 className="catch">BASKET CASE</h1>
                      <h2 style={subtitle}>Not your normal Basketball Game.
                      <br/>Register here and find out who's playing!</h2>
 
@@ -83,7 +83,7 @@ import './register.css';
 
                 </form>
 
-                  <p style={{fontSize: 20, fontWeight: 'bold', position: 'relative', 'zIndex': 2}}>Already have an account? <Link to="/signin">
+                  <p style={{fontSize: 20, fontWeight: 'bold', fontFamily: 'Droid Serif', position: 'relative', 'zIndex': 2}}>Already have an account? <Link to="/signin">
                       <a>Sign in here</a></Link></p>
 
              </div>

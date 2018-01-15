@@ -16,12 +16,13 @@ body {
   padding: 0;
   margin: 0;
   padding-top: 0;
-   background-image: url("../images/cool.png");  
+   background-image: url("../images/word.png");  
    background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
    position: absolute; 
+ /*filter: blur(4px);*/
   /*top: 0; 
   left: 0; 
   right: 0; 
@@ -32,8 +33,10 @@ body {
 
 }
 
-
-
+/*.LinkUp {
+  filter: blur(0px);
+}
+*/
 
 .OutGames {
   background: #000000;
@@ -120,7 +123,7 @@ div.venueItem {
   font-size: 15px;
   text-shadow: 4px 4px 8px #000;
   text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', Sans-Serif;
   border-radius: 7px;
 }
 
@@ -139,7 +142,7 @@ div.venueItem {
   font-size: 15px;
   text-shadow: 4px 4px 8px #000;
   text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', Sans-Serif;
   border-radius: 7px;
 }
 
@@ -173,7 +176,7 @@ div.venueItem {
           font-size: 18px;
           text-shadow: 4px 4px 8px #000;
           text-transform: uppercase;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', Sans-Serif;
 
         }
 
@@ -193,7 +196,7 @@ div.venueItem {
           font-size: 18px;
           text-shadow: 4px 4px 8px #000;
            text-transform: uppercase;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', Sans-Serif;
         }
 
 
@@ -231,7 +234,17 @@ div.venueItem {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 20px;
+  font-family: 'Droid Serif', Serif;
  /* font-weight: bold;*/
+}
+
+.catch {
+  font-family: 'Roboto', Sans-Serif;
+/*font-size: 35px;*/
+}
+
+.leader {
+  font-family: 'Droid Serif', Serif;
 }
 
 .next {
@@ -305,8 +318,9 @@ div.venueItem {
   margin-right: auto;
   display: flex;
   padding: 5px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 700px;
+  background-color: rgba(0,0,0,.25);
  /* background: white;*/
 }
 
